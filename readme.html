@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>TLS-Exporter Channel Binding Plugin Readme</title>
+    <style type="text/css">
+        BODY {
+            font-size : 100%;
+        }
+        BODY, TD, TH {
+            font-family : tahoma, verdana, arial, helvetica, sans-serif;
+            font-size : 0.8em;
+        }
+        H2 {
+             font-size : 10pt;
+             font-weight : bold;
+        }
+        A:hover {
+            text-decoration : none;
+        }
+        H1 {
+            font-family : tahoma, arial, helvetica, sans-serif;
+            font-size : 1.4em;
+            font-weight: bold;
+            border-bottom : 1px #ccc solid;
+            padding-bottom : 2px;
+        }
+
+        TT {
+            font-family : courier new;
+            font-weight : bold;
+            color : #060;
+        }
+        PRE {
+            font-family : courier new;
+            font-size : 100%;
+        }
+        #datatable TH {
+            color : #fff;
+            background-color : #2A448C;
+            text-align : left;
+        }
+        #datatable TD {
+            background-color : #FAF6EF;
+        }
+        #datatable .name {
+            background-color : #DCE2F5;
+        }
+    </style>
+</head>
+<body>
+
+<h1>
+    TLS-Exporter Channel Binding Plugin Readme
+</h1>
+
+<h2>Overview</h2>
+
+<p>
+The TLS-Exporter Channel Binding plugin adds support for the <a href="https://datatracker.ietf.org/doc/html/rfc9266">tls-exporter channel binding</a> to the <a href="https://www.igniterealtime.org/projects/openfire/">Openfire</a> real-time communications server.
+</p>
+
+<h2>What is Channel Binding?</h2>
+
+<p>
+Channel binding is a security mechanism that cryptographically ties authentication at the application layer to the underlying secure transport (such as TLS). This helps prevent certain types of man-in-the-middle attacks by ensuring that both parties are using the same secure channel. The <code>tls-exporter</code> channel binding type is defined in <a href="https://datatracker.ietf.org/doc/html/rfc9266">RFC 9266</a>.
+</p>
+
+<p>
+Openfire supports channel binding since version 5.1.0. This plugin specifically adds support for the <code>tls-exporter</code> channel binding type, which is only available in Java 25 and newer.
+</p>
+
+<h2>Motivation</h2>
+
+<p>
+The functionality provided by this plugin requires Java 25 or later. As Openfire currently requires only Java 17 or later, this feature is provided as a plugin so that administrators running Openfire with Java 25+ can benefit from it. Once Openfire increases its minimum Java version to 25 or later, this plugin will likely be discontinued and its functionality merged into Openfire core.
+</p>
+
+<h2>Installation</h2>
+
+<ol>
+    <li>Ensure your Openfire server is running on Java 25 or newer.</li>
+    <li>Copy the <code>tlsexportercb.jar</code> file into the <code>plugins</code> directory of your Openfire installation.</li>
+    <li>The plugin will be automatically deployed.</li>
+</ol>
+
+<h2>Reporting Issues</h2>
+
+<p>
+Issues may be reported to the <a href="https://discourse.igniterealtime.org">Ignite Realtime forums</a> or via this repo's <a href="https://github.com/igniterealtime/openfire-tlsexportercb-plugin">GitHub Issues</a>.
+</p>
+
+<h2>Attribution</h2>
+<p>
+    Logo icons from Font Awesome Free 7.2.0 by <a href="https://fontawesome.com">@fontawesome</a> - <a href="https://fontawesome.com/license/free">License</a> - Copyright 2026 Fonticons, Inc.
+</p>
+</body>
+</html>
