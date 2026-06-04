@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.igniterealtime.openfire.plugins</groupId>
     <artifactId>tlsexportercb</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>tlsexportercb</name>
     <description>Adds support for the tls-exporter channel binding to Openfire, enabling enhanced security for authentication when running on Java 25 or newer.</description>
 
